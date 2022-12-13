@@ -1,5 +1,6 @@
-import { Request, Response } from "express";
+import { Request } from "express";
+import Product from "../models/Product";
 
-export const createProduct = (req: Request, res: Response): void => {
-  console.log(req, res);
+export const createProduct = (req: Request) => {
+  Product.create(req.body);
 };
